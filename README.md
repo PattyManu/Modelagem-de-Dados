@@ -1,22 +1,11 @@
-![](https://i.imgur.com/xG74tOh.png)
-
-# Exercício 01
 
 ## Modelando e criando Banco de dados
 
-Uma empresa no seguimento de supermercados solicitou um sistema para vendas online. A empresa terá um supermecado virtual e precisa estruturar um banco de dados para integrar ao sistema que já está sendo desenvolvido. Os responsáveis pelo projeto já modelou o banco de dados e solicitou que os desenvolvedores implementassem.
+Simulação de um ecommecer, usando mudelagem de dados no PostgresSQL. Intuito de fortalecer os conhecimento adquiridos durante as aulas na Cubos Academy.
 
-De acordo com a modelagem de dados disponibilizada no arquivo `modelagem.png`, faça a criação do banco de dados `ecommerce` e suas tabelas com todos os relacionamentos apresentados.
+Abaixo tem alguns exemplos de como as tabelas se comportam no PostgresSQL. Para uma melhor visualização, tem a imagem salva neste repositório.
 
-obs.:
-
-a) O campo cpf da tabela `clientes` e da tabela `vendedores` não pode aceitar registros duplicados.
-
-b) Os identificadores em negrito significa que são chaves primárias.
-
-Após a criação do banco de dados e suas tabelas, vamos precisar uma série de operações conforme descritas abaixo:
-
-1 - Alimentar a tabela `categorias` com as seguintes informações.
+1 - Tabela `categorias` com as seguintes informações.
 
 | nome       |
 | ---------- |
@@ -26,7 +15,7 @@ Após a criação do banco de dados e suas tabelas, vamos precisar uma série de
 | bebidas    |
 | utilidades |
 
-2 - Alimentar a tabela `produtos` com as seguintes informações:
+2 - Tabela `produtos` com as seguintes informações:
 
 | nome                        | descricao                                                                                                    | preco | quantidade_em_estoque | categoria_id              |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------ | ----- | --------------------- | ------------------------- |
@@ -49,9 +38,7 @@ Após a criação do banco de dados e suas tabelas, vamos precisar uma série de
 | Manga                       | Rico em Vitamina A, potássio e vitamina C                                                                    | 198   | 176                   | `id_categoria_frutas`     |
 | Uva                         | NÃO CONTÉM GLÚTEN.                                                                                           | 420   | 90                    | `id_categoria_frutas`     |
 
-Obs.: informe o `id` da `categoria_id` referente a cada produto. Ex.: frutas `categoria_id = 1`.
-
-3 - Alimentar a tabela `clientes` com as seguintes informações
+3 - Tabela `clientes` com as seguintes informações
 
 | cpf            | nome               |
 | -------------- | ------------------ |
@@ -60,7 +47,7 @@ Obs.: informe o `id` da `categoria_id` referente a cada produto. Ex.: frutas `ca
 | 631.933.100-34 | Ana Rodrigues      |
 | 756.705.050-18 | Maria da Conceição |
 
-4 - Alimentar a tabela `vendedores` com as seguintes informações
+4 - Tabela `vendedores` com as seguintes informações
 
 | cpf            | nome                 |
 | -------------- | -------------------- |
@@ -68,43 +55,5 @@ Obs.: informe o `id` da `categoria_id` referente a cada produto. Ex.: frutas `ca
 | 232.625.460-03 | Beatriz Souza Santos |
 | 280.071.550-23 | Carlos Eduardo       |
 
-5 - Agora que o banco de dados está alimentado, vamos realizar algumas vendas. Sendo assim, segue um relatórios para que as vendas sejam lançadas.
 
-Obs.: Sempre que lançar uma venda, será necessário abater as quantidades no estoque dos produtos vendidos antes de uma nova venda.
 
-a) José Algusto comprou os seguintes itens com o vendedor Carlos Eduardo:
-
-- 1 Mamão, 1 Pepsi de 2l, 6 Heinekens de 600ml, 1 Escova dental e 5 Maçãs.
-
-b) Ana Rodrigues comprou os seguintes itens com a vendedora Beatriz Souza Santos
-
-- 10 Mangas, 3 Uvas, 5 Mamões, 10 tomates e 2 Acelgas.
-
-c) Maria da Conceição comprou os seguintes itens com a vendedora Beatriz Souza Santos
-
-- 1 Vassoura, 6 Águas sem gás e 5 Mangas.
-
-d) Maria da Conceição comprou os seguintes itens com o vendedor Rodrigo Sampaio
-
-- 1 Balde para lixo, 6 Uvas, 1 Macarrão parafuso, 3 Mamões, 20 tomates e 2 Acelgas.
-
-e) Antonio Oliveira comprou os seguintes itens com o vendedor Rodrigo Sampaio
-
-- 8 Uvas, 1 Massa para lasanha, 3 Mangas, 8 tomates e 2 Heinekens 600ml.
-
-Todo script construido deverá ser disponibilizado no arquivo `query.sql` do diretório atual.
-
-Faça o teste com outros exemplos.
-
-Faça commit do resultado.
-
----
-
-Preencha a checklist para finalizar o exercício:
-
-- [ ] Resolver o exercício revendo a aula se necessário
-- [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
-- [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
-- [ ] Pushar os commits no seu fork na origem (`git push origin nome-da-branch`)
-
-###### tags: `exercícios` `banco de dados` `sql` `postgres`

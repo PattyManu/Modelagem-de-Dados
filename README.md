@@ -1,7 +1,7 @@
 
 ## Modelando e criando Banco de dados
 
-Simulação de um ecommecer, usando mudelagem de dados no PostgresSQL. Intuito de fortalecer os conhecimento adquiridos durante as aulas na Cubos Academy.
+Simulação de um ecommerce, usando mudelagem de dados no PostgresSQL. Intuito de fortalecer os conhecimento adquiridos durante as aulas na Cubos Academy.
 
 Abaixo tem alguns exemplos de como as tabelas se comportam no PostgresSQL. Para uma melhor visualização, tem a imagem salva neste repositório.
 
